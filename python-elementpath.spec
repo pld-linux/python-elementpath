@@ -1,13 +1,15 @@
+# NOTE: for python-elementpath >= 1.4 (for python 3.5+) see python3-elementpath.spec
 #
 # Conditional build:
 %bcond_without	doc	# Sphinx documentation
 %bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-elementpath.spec)
 
 Summary:	XPath 1.0/2.0 parsers and selectors for ElementTree and lxml
 Summary(pl.UTF-8):	Parsery i selektory XPath 1.0/2.0 dla ElementTree oraz lxml
 Name:		python-elementpath
+# keep 1.3.x here for python2 support
 Version:	1.3.3
 Release:	1
 License:	MIT
